@@ -51,7 +51,8 @@ var app = new Vue ({
                 text: 'comprare uova', 
                 done: false
             },
-        ]
+        ],
+        textInput: '',
     },
     methods: {
         rimuovoElemento(index){
@@ -65,6 +66,10 @@ var app = new Vue ({
             } else {
                 elem.done = false;
             }
+        },
+        aggiungiTodo(){
+            let newText = { text: this.textInput, done: false }
+            this.todoList.push(newText)
         }
     }
 })
