@@ -52,7 +52,7 @@ var app = new Vue ({
                 done: false
             },
         ],
-        textInput: '',
+        textInput: ''
     },
     methods: {
         rimuovoElemento(index){
@@ -70,6 +70,9 @@ var app = new Vue ({
         aggiungiTodo(){
             let newText = { text: this.textInput, done: false }
             this.todoList.push(newText)
-        }
+        },
+        submit(){
+            this.aggiungiTodo()
+       }
     }
 })

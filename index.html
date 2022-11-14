@@ -15,7 +15,7 @@
         <div class="container pt-4">
 
             <div class="d-flex justify-content-center align-items-center">
-              <input type="text" placeholder="Inserisci una nuova task" v-model="textInput">
+              <input type="text" placeholder="Inserisci una nuova task" v-model="textInput" v-on:keyup.enter="submit">
               <button class="btn btn-primary ms-3" @click="aggiungiTodo">Aggiungi</button>
             </div>
         
@@ -29,6 +29,7 @@
                 <h2 class="mt-4" v-else>Non ci sono elementi nella Todo </h2>
             </div>
             <h2 class="my-5">Todo Completate</h2>
+            
         </div>
 
 
